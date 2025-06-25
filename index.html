@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chocolate Cake Recipe</title>
+  <link rel="stylesheet" href="stylesheet2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="recipe-card">
+  <h1>🍫 Chocolate Cake</h1>
+  <img src="chocolate cake.jpg" alt="Chocolate Cake" class="dish-image" />
+
+  <div class="info">
+    <p>⏱ Prep Time: 45 mins</p>
+    <p>🍽 Serves: 4</p>
+  </div>
+
+  <button onclick="toggleSection('ingredients')">Show Ingredients</button>
+  <ul id="ingredients" class="hidden">
+    <li>1 cup flour</li>
+    <li>1/2 cup sugar</li>
+    <li>1/2 cup cocoa powder</li>
+    <li>2 eggs</li>
+    <li>1/2 cup milk</li>
+  </ul>
+
+  <button onclick="toggleSection('steps')">Show Steps</button>
+  <ol id="steps" class="hidden">
+    <li>Preheat oven to 180°C.</li>
+    <li>Mix dry ingredients.</li>
+    <li>Add eggs and milk.</li>
+    <li>Bake for 30 mins.</li>
+  </ol>
+
+  <button onclick="startCooking()">Start Cooking</button>
+  <button onclick="nextStep()">Next Step</button>
+  <div id="timer">⏱ Time Left: --</div>
+
+  <div id="progress-bar">
+    <div id="progress-fill"></div>
+  </div>
+
+  <button onclick="window.print()" id="printBtn">🖨 Print Recipe</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

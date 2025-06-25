@@ -1,0 +1,131 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: #fdfdfd;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color: #333;
+}
+
+.recipe-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.recipe-card h1 {
+    text-align: center;
+    font-weight: 600;
+}
+
+.dish-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+button {
+    margin: 5px 0;
+    padding: 10px;
+    width: 100%;
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #5a4acb;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+ul li, ol li {
+    margin: 5px 0;
+    transition: color 0.3s, transform 0.2s;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+ul li:hover, ol li:hover {
+    color: #6a5acd;
+    text-decoration: underline;
+}
+
+ol li.active {
+    background-color: #e0f7fa;
+    font-weight: bold;
+    transform: scale(1.02);
+}
+
+.hidden {
+    display: none;
+}
+
+#progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #eee;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #4caf50;
+    transition: width 0.5s ease;
+    border-radius: 5px;
+}
+
+#timer {
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #d32f2f;
+    background: #fff3cd;
+    padding: 8px;
+    border: 1px solid #ffeeba;
+    border-radius: 5px;
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+    .recipe-card {
+        padding: 15px;
+    }
+}
+
+/* Print Styling */
+@media print {
+    body {
+        background: white;
+    }
+
+    .recipe-card {
+        box-shadow: none;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    button, #progress-bar, #timer {
+        display: none;
+    }
+}
